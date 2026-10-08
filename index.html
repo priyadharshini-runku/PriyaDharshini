@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Priya Dharshini Runku — Creative IT Portfolio</title>
+  <meta
+    content="Editorial Portfolio of Priya Dharshini Runku — B.Tech IT Student, Aspiring Software Developer, and Smart India Hackathon 2026 Participant."
+    name="description" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Oswald:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#EAD4A0',
+            'cream-light': '#FCF5E6',
+            blue: '#5B6689',
+            'blue-dark': '#484D5F',
+            charcoal: '#2D2723',
+            taupe: '#B09677',
+            white: '#FFFDF7',
+          },
+          fontFamily: {
+            display: ['Anton', 'Oswald', 'sans-serif'],
+            heading: ['Oswald', 'sans-serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Complete Inline Design System & Layout Styles -->
+  <style>
+    :root {
+      --cream: #EAD4A0;
+      --cream-light: #FCF5E6;
+      --blue: #5B6689;
+      --blue-dark: #484D5F;
+      --charcoal: #2D2723;
+      --taupe: #B09677;
+      --white: #FFFDF7;
+      --font-display: 'Anton', 'Oswald', sans-serif;
+      --font-heading: 'Oswald', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--cream-light);
+      color: var(--charcoal);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container Utility */
+    .container-editorial {
+      width: 100%;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 480px) {
+      .container-editorial {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container-editorial {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+    }
+
+    /* Editorial Typography */
+    .hero-name {
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 8.5vw, 8.5rem);
+      line-height: 0.88;
+      text-transform: uppercase;
+      letter-spacing: -0.025em;
+      color: var(--charcoal);
+    }
+
+    .hero-name span {
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .hero-name {
+        font-size: clamp(2.35rem, 11vw, 3.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-name {
+        font-size: clamp(3.75rem, 5.2vw, 6.25rem);
+        line-height: 0.88;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .hero-name {
+        font-size: 6.25rem;
+        line-height: 0.88;
+      }
+    }
+
+    .editorial-section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 6.5vw, 6.5rem);
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    /* Cards & Accents */
+    .editorial-card {
+      background-color: var(--white);
+      border: 1.5px solid var(--charcoal);
+      box-shadow: 4px 4px 0px var(--charcoal);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .editorial-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--charcoal);
+    }
+
+    .editorial-card-blue {
+      background-color: var(--blue-dark);
+      border: 1.5px solid var(--cream);
+      box-shadow: 4px 4px 0px var(--cream);
+      color: var(--cream-light);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .editorial-card-blue:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--cream);
+    }
+
+    /* Badges & Stamps */
+    .badge-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border: 1.5px solid currentColor;
+    }
+
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    /* Editorial Action Buttons */
+    .btn-editorial-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 48px;
+      background: var(--charcoal);
+      color: var(--cream-light);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.8rem;
+      border: 1.5px solid var(--charcoal);
+      box-shadow: 4px 4px 0px var(--taupe);
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .btn-editorial-primary:hover {
+      background: var(--blue-dark);
+      color: var(--cream);
+      box-shadow: 6px 6px 0px var(--charcoal);
+      transform: translate(-2px, -2px);
+    }
+
+    .btn-editorial-primary:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    .btn-editorial-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 48px;
+      background: transparent;
+      color: var(--charcoal);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.8rem;
+      border: 1.5px solid var(--charcoal);
+      box-shadow: 4px 4px 0px var(--charcoal);
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .btn-editorial-outline:hover {
+      background: var(--cream);
+      box-shadow: 6px 6px 0px var(--charcoal);
+      transform: translate(-2px, -2px);
+    }
+
+    .btn-editorial-outline:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    .btn-editorial-blue-filled {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.8rem;
+      border: 1.5px solid var(--cream);
+      box-shadow: 4px 4px 0px var(--charcoal);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-editorial-blue-filled:hover {
+      background: var(--white);
+      color: var(--charcoal);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--charcoal);
+    }
+
+    .btn-editorial-blue-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--cream);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.8rem;
+      border: 1.5px solid var(--cream);
+      box-shadow: 4px 4px 0px var(--cream);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-editorial-blue-outline:hover {
+      background: var(--cream);
+      color: var(--charcoal);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--cream-light);
+    }
+
+    /* Ticker Tape */
+    .marquee-track {
+      display: flex;
+      gap: 2rem;
+      overflow: hidden;
+      user-select: none;
+      white-space: nowrap;
+      border-top: 1.5px solid var(--charcoal);
+      border-bottom: 1.5px solid var(--charcoal);
+      padding: 0.85rem 0;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      animation: scrollMarquee 24s linear infinite;
+    }
+
+    @keyframes scrollMarquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--charcoal);
+      color: var(--cream-light);
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      z-index: 99999;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 1.5rem;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream-light);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--blue);
+    }
+
+    /* ========================================================================
+       Editorial Hero Styles & Responsive Framing
+       ======================================================================== */
+    .hero-layout-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-layout-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+      }
+
+      /* Unwraps left column container on mobile so children follow strict mobile order */
+      .hero-left-col {
+        display: contents;
+      }
+
+      .hero-header-block {
+        order: 1;
+      }
+
+      .hero-bio-block {
+        order: 2;
+      }
+
+      .hero-image-block {
+        order: 3;
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-actions-block {
+        order: 4;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-layout-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: clamp(2rem, 3.5vw, 4rem);
+        align-items: center;
+      }
+
+      .hero-left-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hero-image-block {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .hero-layout-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+        gap: 4.5rem;
+      }
+    }
+
+    /* Editorial Portrait Frame */
+    .hero-portrait-frame {
+      position: relative;
+      width: 80%;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 480px) {
+      .hero-portrait-frame {
+        width: 84%;
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero-portrait-frame {
+        width: 82%;
+        max-width: 245px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-portrait-frame {
+        width: 100%;
+        max-width: 450px;
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .hero-portrait-frame {
+        max-width: 490px;
+      }
+    }
+
+    /* Asymmetric Muted-Blue Editorial Backdrop Plane */
+    .hero-portrait-backdrop {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: -8px;
+      bottom: -8px;
+      background-color: var(--blue);
+      border: 1.5px solid var(--charcoal);
+      z-index: 1;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (min-width: 1024px) {
+      .hero-portrait-backdrop {
+        top: 14px;
+        left: 14px;
+        right: -14px;
+        bottom: -14px;
+      }
+    }
+
+    /* Foreground Portrait Container */
+    .hero-portrait-inner {
+      position: relative;
+      z-index: 2;
+      background-color: var(--white);
+      border: 1.5px solid var(--charcoal);
+      box-shadow: 4px 4px 0px var(--charcoal);
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-portrait-frame:hover .hero-portrait-inner {
+      transform: translate(-3px, -3px);
+      box-shadow: 7px 7px 0px var(--charcoal);
+    }
+
+    .hero-portrait-frame:hover .hero-portrait-backdrop {
+      transform: translate(2px, 2px);
+    }
+
+    /* Profile Image Treatment with preserved face focal point */
+    .hero-portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-portrait-frame:hover .hero-portrait-img {
+      transform: scale(1.025);
+    }
+
+    /* Corner Editorial Tag */
+    .hero-portrait-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: var(--cream-light);
+      color: var(--charcoal);
+      border: 1.5px solid var(--charcoal);
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      padding: 0.25rem 0.65rem;
+      box-shadow: 2px 2px 0px var(--charcoal);
+      user-select: none;
+      z-index: 3;
+    }
+
+    /* Editorial Caption Strip */
+    .hero-portrait-caption {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 0 0.25rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 360px) {
+      .hero-portrait-caption {
+        font-size: 0.58rem;
+        letter-spacing: 0.04em;
+      }
+    }
+
+    /* Subtle Entry Animations */
+    @keyframes heroFadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroImageReveal {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.985);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .hero-animate-header {
+      animation: heroFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s backwards;
+    }
+
+    .hero-animate-bio {
+      animation: heroFadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards;
+    }
+
+    .hero-animate-actions {
+      animation: heroFadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards;
+    }
+
+    .hero-animate-image {
+      animation: heroImageReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .hero-animate-header,
+      .hero-animate-bio,
+      .hero-animate-actions,
+      .hero-animate-image {
+        animation: none !important;
+        transform: none !important;
+      }
+
+      .hero-portrait-inner,
+      .hero-portrait-backdrop,
+      .hero-portrait-img,
+      .btn-editorial-primary,
+      .btn-editorial-outline {
+        transition: none !important;
+        transform: none !important;
+      }
+    }
+
+    .hero-actions-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 540px) {
+      .hero-actions-block {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+      }
+
+      .hero-actions-block .btn-editorial-primary,
+      .hero-actions-block .btn-editorial-outline {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+    }
+
+    /* Role Badge & Title Typography */
+    .hero-role-badge {
+      display: inline-block;
+      align-self: flex-start;
+      width: fit-content;
+      padding: 0.25rem 0.65rem;
+      background-color: var(--charcoal);
+      color: var(--cream-light);
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .hero-role-title {
+      font-family: var(--font-heading);
+      font-size: clamp(0.75rem, 2.4vw, 1rem);
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body class="selection:bg-[#EAD4A0] selection:text-[#2D2723]">
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#main-content">Skip to Main Content</a>
+  <!-- ========================================================================
+       1. STICKY EDITORIAL NAVBAR (Cream-light Background)
+       ======================================================================== -->
+  <header class="sticky top-0 z-50 bg-[#FCF5E6]/95 backdrop-blur-md border-b-[1.5px] border-[#2D2723]">
+    <div class="container-editorial flex items-center justify-between h-20">
+      <!-- Monogram Brand -->
+      <a class="flex items-center gap-3.5 group no-underline text-inherit" href="#home">
+        <div
+          class="w-11 h-11 bg-[#2D2723] text-[#FCF5E6] flex items-center justify-center font-display text-2xl tracking-tighter border border-[#2D2723] transition-transform group-hover:rotate-6">
+          PD
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-bold text-lg tracking-wider text-[#2D2723] leading-tight uppercase">Priya
+            Dharshini</span>
+          <span class="font-heading text-xs tracking-widest text-[#B09677] uppercase font-semibold">IT Student •
+            Portfolio</span>
+        </div>
+      </a>
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-7 xl:gap-8">
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#about">01 About</a>
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#skills">02 Skills</a>
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#work">03 Work</a>
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#exploration">04 Learning</a>
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#journey">05 Journey</a>
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#academics">Academics</a>
+        <a class="font-heading text-xs font-semibold tracking-widest uppercase text-[#2D2723] hover:text-[#5B6689] transition-colors"
+          href="#contact">06 Contact</a>
+      </nav>
+      <!-- CTA & Hamburger -->
+      <div class="flex items-center gap-4">
+        <a class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-[1.5px] border-[#2D2723] bg-[#EAD4A0] font-heading font-bold text-xs tracking-widest uppercase text-[#2D2723] hover:bg-[#2D2723] hover:text-[#FCF5E6] transition-all duration-200"
+          href="#contact">
+          <span>Let's Connect</span>
+          <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
+            <line x1="7" x2="17" y1="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+        <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu"
+          class="lg:hidden w-11 h-11 border-[1.5px] border-[#2D2723] bg-[#FCF5E6] flex flex-col items-center justify-center gap-1.5 cursor-pointer"
+          id="mobile-toggle">
+          <span class="w-5 h-[2px] bg-[#2D2723] transition-transform"></span>
+          <span class="w-5 h-[2px] bg-[#2D2723] transition-opacity"></span>
+          <span class="w-5 h-[2px] bg-[#2D2723] transition-transform"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Drawer Menu -->
+    <div aria-hidden="true"
+      class="hidden lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[#5B6689] border-t-2 border-[#EAD4A0] p-8 flex flex-col justify-between overflow-y-auto z-40"
+      id="mobile-menu">
+      <div class="space-y-6 pt-4">
+        <div class="text-[#EAD4A0] font-heading text-xs tracking-widest uppercase pb-2 border-b border-[#EAD4A0]/30">
+          Directory / Navigation</div>
+        <div class="flex flex-col gap-4 font-display text-4xl text-[#FCF5E6] uppercase tracking-tight">
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#about">01 About</a>
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#skills">02 Skills</a>
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#work">03 Work</a>
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#exploration">04 Learning</a>
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#journey">05 Journey</a>
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#academics">06 Academics</a>
+          <a class="mobile-link hover:text-[#EAD4A0] transition-colors" href="#contact">07 Contact</a>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-[#EAD4A0]/30 text-[#FCF5E6]">
+        <p class="font-heading text-xs uppercase tracking-widest text-[#EAD4A0] mb-2">Location</p>
+        <p class="font-body text-sm mb-6">Visakhapatnam, Andhra Pradesh, India</p>
+        <a class="mobile-link block w-full py-3.5 bg-[#EAD4A0] text-[#2D2723] font-heading font-bold text-center tracking-widest uppercase text-sm border-[1.5px] border-[#2D2723]"
+          href="#contact">Initiate Contact</a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content">
+    <!-- ========================================================================
+         2. EDITORIAL HERO SECTION (Cream-light Background)
+         ======================================================================== -->
+    <section class="bg-[#FCF5E6] pt-10 md:pt-14 lg:pt-16 pb-16 md:pb-24 border-b-[1.5px] border-[#2D2723]" id="home">
+      <div class="container-editorial">
+        <!-- Top Metadata Bar -->
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b-[1.5px] border-[#2D2723] mb-8 md:mb-12">
+          <div class="flex items-center gap-2.5">
+            <span class="w-2.5 h-2.5 bg-[#5B6689] inline-block border border-[#2D2723] shrink-0"></span>
+            <span
+              class="font-heading text-[10px] sm:text-xs md:text-sm font-bold tracking-widest uppercase text-[#2D2723]">B.TECH
+              INFORMATION TECHNOLOGY • 2025–2029</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="badge-stamp text-[#2D2723] border-[#2D2723] bg-[#EAD4A0]">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 inline-block animate-pulse"></span>
+              OPEN FOR INTERNSHIPS
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Editorial Grid -->
+        <div class="hero-layout-grid">
+          <!-- Left Column: Intro, Name, Role, Tagline, CTAs -->
+          <div class="hero-left-col">
+            <!-- Eyebrow & Name -->
+            <div class="hero-header-block hero-animate-header">
+              <span
+                class="font-heading font-bold text-xs md:text-sm tracking-[0.25em] text-[#B09677] uppercase block mb-3 md:mb-4">CREATIVE
+                IT PORTFOLIO • VOL. 2026</span>
+              <h1 class="hero-name">
+                <span>PRIYA</span>
+                <span>DHARSHINI</span>
+                <span>RUNKU</span>
+              </h1>
+            </div>
+
+            <!-- Role & Tagline -->
+            <div
+              class="hero-bio-block hero-animate-bio mt-6 md:mt-8 pt-6 md:pt-8 border-t-[1.5px] border-[#2D2723] space-y-3.5 md:space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2 max-w-xl">
+                <span class="hero-role-badge">Role</span>
+                <span class="hero-role-title">ASPIRING SOFTWARE DEVELOPER <span class="hidden sm:inline">•</span><br
+                    class="sm:hidden" />CREATIVE PROBLEM SOLVER</span>
+              </div>
+              <p class="font-body text-base md:text-lg lg:text-xl text-[#2D2723] leading-relaxed max-w-xl font-normal">
+                Creative IT student turning ideas into practical technology-driven solutions. Learning through hands-on
+                projects, exploring emerging technologies and solving problems through programming, collaboration and
+                creativity.
+              </p>
+            </div>
+
+            <!-- Call to Actions -->
+            <div class="hero-actions-block hero-animate-actions mt-6 md:mt-8 flex flex-wrap gap-4 items-center">
+              <a class="btn-editorial-primary" href="#work">
+                <span>View My Work</span>
+                <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+                  <line x1="5" x2="19" y1="12" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a class="btn-editorial-outline" href="#contact">
+                <span>Let's Connect</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Framed Profile Photo -->
+          <div class="hero-image-block hero-animate-image">
+            <div class="hero-portrait-frame">
+              <!-- Asymmetric Muted-Blue Offset Backdrop -->
+              <div aria-hidden="true" class="hero-portrait-backdrop"></div>
+              <!-- Foreground Image Container with 4:5 aspect ratio and clean border -->
+              <!-- Profile image updated to the user-provided Cloudinary image. -->
+              <div class="hero-portrait-inner">
+                <img alt="Portrait of Priya Dharshini Runku — B.Tech IT Student and Aspiring Software Developer"
+                  class="hero-portrait-img" decoding="async" fetchpriority="high" height="750" loading="eager"
+                  src="https://res.cloudinary.com/rlr6k9xk/image/upload/v1791439351/IMG-20251128-WA0017.jpg.jpg"
+                  width="600" />
+                <div aria-hidden="true" class="hero-portrait-badge">
+                  PORTRAIT • 2026
+                </div>
+              </div>
+              <!-- Editorial Figure Caption -->
+              <div class="hero-portrait-caption font-heading font-bold uppercase">
+                <span class="text-[#B09677]">FIG. 01 — IDENTITY</span>
+                <span class="text-[#2D2723]">VISAKHAPATNAM, IN</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================
+         RUNNING TICKER / MARQUEE TAPE (Cream Background #EAD4A0)
+         ======================================================================== -->
+    <div aria-hidden="true" class="marquee-track">
+      <div class="marquee-content">
+        <span>B.Tech Information Technology</span>
+        <span>•</span>
+        <span>Smart India Hackathon 2026</span>
+        <span>•</span>
+        <span>SkillBridge Project</span>
+        <span>•</span>
+        <span>C &amp; Data Structures</span>
+        <span>•</span>
+        <span>Web &amp; UI Prototyping</span>
+        <span>•</span>
+        <span>Continuous Learning</span>
+        <span>•</span>
+        <span>Visakhapatnam, Andhra Pradesh</span>
+        <span>•</span>
+      </div>
+      <div aria-hidden="true" class="marquee-content">
+        <span>B.Tech Information Technology</span>
+        <span>•</span>
+        <span>Smart India Hackathon 2026</span>
+        <span>•</span>
+        <span>SkillBridge Project</span>
+        <span>•</span>
+        <span>C &amp; Data Structures</span>
+        <span>•</span>
+        <span>Web &amp; UI Prototyping</span>
+        <span>•</span>
+        <span>Continuous Learning</span>
+        <span>•</span>
+        <span>Visakhapatnam, Andhra Pradesh</span>
+        <span>•</span>
+      </div>
+    </div>
+    <!-- ========================================================================
+         3. SECTION 01 / ABOUT (Blue Background #5B6689, Cream Typography)
+         ======================================================================== -->
+    <section class="bg-[#5B6689] text-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="about">
+      <div class="container-editorial">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#EAD4A0]/40 mb-14">
+          <div>
+            <span
+              class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#EAD4A0] uppercase block mb-1">01
+              / BACKGROUND &amp; MANIFESTO</span>
+            <h2 class="editorial-section-title text-[#FCF5E6]">WHO I AM</h2>
+          </div>
+          <div class="font-heading text-xs uppercase tracking-widest text-[#EAD4A0]/90">
+            SAGI RAMAKRISHNAM RAJU ENGG. COLLEGE • 2ND YEAR
+          </div>
+        </div>
+        <!-- Split Editorial Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Left: Big Philosophy Callout (Cols 5) -->
+          <div
+            class="lg:col-span-5 bg-[#484D5F] border-[1.5px] border-[#EAD4A0] p-8 md:p-10 shadow-[6px_6px_0px_#2D2723]">
+            <span class="font-heading text-xs font-bold tracking-widest text-[#EAD4A0] uppercase block mb-6">PHILOSOPHY
+              &amp; MOTIVATION</span>
+            <div class="font-display text-5xl md:text-6xl text-[#EAD4A0] leading-[0.95] uppercase mb-8">
+              CURIOUS.<br />
+              CREATIVE.<br />
+              BUILDING.
+            </div>
+            <p class="font-body text-base text-[#FCF5E6]/90 leading-relaxed mb-6">
+              "Technology becomes truly powerful when clean logic aligns with human-centric purpose. I believe in
+              learning continuously through practical challenges."
+            </p>
+            <div
+              class="pt-6 border-t border-[#EAD4A0]/30 flex flex-col gap-2 font-heading text-xs tracking-widest uppercase text-[#EAD4A0]">
+              <div class="flex justify-between">
+                <span>DEGREE STAGE</span>
+                <span class="text-[#FCF5E6]">2ND YR • 1ST SEMESTER</span>
+              </div>
+              <div class="flex justify-between">
+                <span>SPECIALIZATION</span>
+                <span class="text-[#FCF5E6]">INFORMATION TECHNOLOGY</span>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Bio Narrative + 3 Structured Cards (Cols 7) -->
+          <div class="lg:col-span-7 space-y-8">
+            <div class="bg-[#FCF5E6] text-[#2D2723] p-8 border-[1.5px] border-[#2D2723] shadow-[6px_6px_0px_#EAD4A0]">
+              <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677] block mb-2">PERSONAL
+                NARRATIVE</span>
+              <p class="font-body text-lg leading-relaxed font-normal">
+                I’m <strong>Priya Dharshini</strong>, a B.Tech Information Technology student at Sagi Ramakrishnam Raju
+                Engineering College. I’m deeply interested in software development, artificial intelligence, programming
+                and database technologies. I enjoy learning by building practical projects, participating in
+                collaborative activities and exploring new technologies. My goal is to continuously strengthen my
+                programming and problem-solving skills while contributing effectively to a team.
+              </p>
+            </div>
+            <!-- 3 Editorial Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="editorial-card-blue p-5">
+                <div class="font-heading text-xs font-bold tracking-widest text-[#EAD4A0] uppercase mb-2">01 • MINDSET
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#FCF5E6] uppercase mb-2">Creative Thinker</h3>
+                <p class="font-body text-xs text-[#FCF5E6]/80 leading-relaxed">
+                  Approaching technical problems with practical thinking and designing user-focused outcomes.
+                </p>
+              </div>
+              <div class="editorial-card-blue p-5">
+                <div class="font-heading text-xs font-bold tracking-widest text-[#EAD4A0] uppercase mb-2">02 • COLLAB
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#FCF5E6] uppercase mb-2">Team Player</h3>
+                <p class="font-body text-xs text-[#FCF5E6]/80 leading-relaxed">
+                  Proven collaboration in high-energy hackathons, including the 6-member SIH 2026 SkillBridge squad.
+                </p>
+              </div>
+              <div class="editorial-card-blue p-5">
+                <div class="font-heading text-xs font-bold tracking-widest text-[#EAD4A0] uppercase mb-2">03 • GROWTH
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#FCF5E6] uppercase mb-2">Continuous Learner</h3>
+                <p class="font-body text-xs text-[#FCF5E6]/80 leading-relaxed">
+                  Strengthening programming, web development, relational databases and AI foundations daily.
+                </p>
+              </div>
+            </div>
+            <!-- Metadata Overview Strip -->
+            <div
+              class="p-4 bg-[#484D5F] border border-[#EAD4A0]/40 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-heading uppercase tracking-wider text-[#EAD4A0]">
+              <div>
+                <span class="block text-[#FCF5E6]/60 text-[10px]">CURRENT CITY</span>
+                <span class="font-bold text-[#FCF5E6]">VISAKHAPATNAM</span>
+              </div>
+              <div>
+                <span class="block text-[#FCF5E6]/60 text-[10px]">STATE / COUNTRY</span>
+                <span class="font-bold text-[#FCF5E6]">ANDHRA PRADESH, IN</span>
+              </div>
+              <div>
+                <span class="block text-[#FCF5E6]/60 text-[10px]">PROGRAM</span>
+                <span class="font-bold text-[#FCF5E6]">B.TECH (IT)</span>
+              </div>
+              <div>
+                <span class="block text-[#FCF5E6]/60 text-[10px]">SEEKING</span>
+                <span class="font-bold text-[#FCF5E6]">INTERNSHIPS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================
+         4. SECTION 02 / SKILLS (Cream-light Background #FCF5E6, Charcoal Text)
+         ======================================================================== -->
+    <section class="bg-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="skills">
+      <div class="container-editorial">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b-[1.5px] border-[#2D2723] mb-14">
+          <div>
+            <span
+              class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#B09677] uppercase block mb-1">02
+              / TECHNICAL TOOLKIT</span>
+            <h2 class="editorial-section-title text-[#2D2723]">WHAT I WORK WITH</h2>
+          </div>
+          <p class="font-body text-sm text-[#2D2723] max-w-sm">
+            Technologies, frameworks, and productivity tools applied in coursework, team projects, and active
+            experiments.
+          </p>
+        </div>
+        <!-- 3 Structured Category Blocks -->
+        <div class="space-y-12">
+          <!-- Category 01: Programming -->
+          <div class="border-[1.5px] border-[#2D2723] bg-[#FFFDF7] p-6 md:p-8 shadow-[4px_4px_0px_#2D2723]">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#2D2723]/25 mb-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="px-2.5 py-1 bg-[#2D2723] text-[#FCF5E6] font-heading font-bold text-xs uppercase tracking-wider">GROUP
+                  01</span>
+                <h3 class="font-heading text-2xl font-bold uppercase tracking-wide text-[#2D2723]">PROGRAMMING
+                  FOUNDATIONS</h3>
+              </div>
+              <span class="font-heading text-xs font-bold text-[#B09677] uppercase tracking-widest">LOGIC &amp; SYSTEM
+                ARCHITECTURE</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- C -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">C LANGUAGE</span>
+                    <span class="pill-tag bg-[#2D2723] text-[#FCF5E6] text-[10px]">FOUNDATION</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">Core syntax, memory pointers, structures, file
+                    handling.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>75%</span>
+                </div>
+              </div>
+              <!-- Data Structures -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">DATA STRUCTURES</span>
+                    <span class="pill-tag bg-[#2D2723] text-[#FCF5E6] text-[10px]">CORE</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">Arrays, stacks, queues, linked lists, searching &amp;
+                    sorting algorithms.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>65%</span>
+                </div>
+              </div>
+              <!-- Java -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">JAVA (OOP)</span>
+                    <span class="pill-tag bg-[#5B6689] text-[#FCF5E6] text-[10px]">LEARNING</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">Classes, inheritance, polymorphism, encapsulation,
+                    collections.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>60%</span>
+                </div>
+              </div>
+              <!-- Python -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">PYTHON</span>
+                    <span class="pill-tag bg-[#5B6689] text-[#FCF5E6] text-[10px]">LEARNING</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">Scripting fundamentals, data manipulation, basic AI
+                    libraries.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>55%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Category 02: Web & Database -->
+          <div class="border-[1.5px] border-[#2D2723] bg-[#FFFDF7] p-6 md:p-8 shadow-[4px_4px_0px_#2D2723]">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#2D2723]/25 mb-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="px-2.5 py-1 bg-[#5B6689] text-[#FCF5E6] font-heading font-bold text-xs uppercase tracking-wider">GROUP
+                  02</span>
+                <h3 class="font-heading text-2xl font-bold uppercase tracking-wide text-[#2D2723]">WEB INTERFACES &amp;
+                  DATABASES</h3>
+              </div>
+              <span class="font-heading text-xs font-bold text-[#B09677] uppercase tracking-widest">FRONTEND &amp;
+                RELATIONAL STORAGE</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- HTML5 & CSS3 -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">HTML5 &amp; CSS3</span>
+                    <span class="pill-tag bg-[#2D2723] text-[#FCF5E6] text-[10px]">SEMANTIC</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">Responsive layouts, Flexbox/Grid, typography, clean
+                    DOM structuring.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>80%</span>
+                </div>
+              </div>
+              <!-- JavaScript -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">JAVASCRIPT</span>
+                    <span class="pill-tag bg-[#5B6689] text-[#FCF5E6] text-[10px]">INTERACTIVE</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">DOM manipulation, event handling, ES6+ syntax,
+                    asynchronous requests.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>60%</span>
+                </div>
+              </div>
+              <!-- DBMS -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">DBMS CONCEPTS</span>
+                    <span class="pill-tag bg-[#2D2723] text-[#FCF5E6] text-[10px]">RELATIONAL</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">Entity-relationship models, normalization (1NF–BCNF),
+                    schemas.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>65%</span>
+                </div>
+              </div>
+              <!-- SQL -->
+              <div class="p-5 border border-[#2D2723] bg-[#FCF5E6] flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start mb-2">
+                    <span class="font-display text-2xl text-[#2D2723]">SQL QUERIES</span>
+                    <span class="pill-tag bg-[#2D2723] text-[#FCF5E6] text-[10px]">QUERYING</span>
+                  </div>
+                  <p class="font-body text-xs text-[#2D2723] mb-4">DDL/DML operations, complex joins, indexing, database
+                    aggregation.</p>
+                </div>
+                <div
+                  class="pt-3 border-t border-[#2D2723]/20 flex justify-between font-heading text-xs font-bold text-[#5B6689]">
+                  <span>PROFICIENCY</span>
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Category 03: Tools & Prototyping -->
+          <div class="border-[1.5px] border-[#2D2723] bg-[#FFFDF7] p-6 md:p-8 shadow-[4px_4px_0px_#2D2723]">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#2D2723]/25 mb-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="px-2.5 py-1 bg-[#B09677] text-[#2D2723] font-heading font-bold text-xs uppercase tracking-wider">GROUP
+                  03</span>
+                <h3 class="font-heading text-2xl font-bold uppercase tracking-wide text-[#2D2723]">DEVELOPMENT &amp;
+                  DESIGN WORKFLOW</h3>
+              </div>
+              <span class="font-heading text-xs font-bold text-[#B09677] uppercase tracking-widest">ECOSYSTEM
+                TOOLS</span>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center gap-3 px-5 py-3 border-[1.5px] border-[#2D2723] bg-[#FCF5E6]">
+                <span class="w-2.5 h-2.5 bg-[#2D2723]"></span>
+                <span class="font-heading font-bold text-sm tracking-wider uppercase text-[#2D2723]">GITHUB</span>
+                <span class="text-xs text-[#B09677] uppercase font-semibold">[VERSION CONTROL]</span>
+              </div>
+              <div class="flex items-center gap-3 px-5 py-3 border-[1.5px] border-[#2D2723] bg-[#FCF5E6]">
+                <span class="w-2.5 h-2.5 bg-[#5B6689]"></span>
+                <span class="font-heading font-bold text-sm tracking-wider uppercase text-[#2D2723]">VS CODE</span>
+                <span class="text-xs text-[#B09677] uppercase font-semibold">[EDITOR &amp; ENVIRONMENT]</span>
+              </div>
+              <div class="flex items-center gap-3 px-5 py-3 border-[1.5px] border-[#2D2723] bg-[#FCF5E6]">
+                <span class="w-2.5 h-2.5 bg-[#B09677]"></span>
+                <span class="font-heading font-bold text-sm tracking-wider uppercase text-[#2D2723]">ANTIGRAVITY</span>
+                <span class="text-xs text-[#B09677] uppercase font-semibold">[DEVELOPER TOOL]</span>
+              </div>
+              <div class="flex items-center gap-3 px-5 py-3 border-[1.5px] border-[#2D2723] bg-[#FCF5E6]">
+                <span class="w-2.5 h-2.5 bg-[#EAD4A0]"></span>
+                <span class="font-heading font-bold text-sm tracking-wider uppercase text-[#2D2723]">FIGMA</span>
+                <span class="text-xs text-[#B09677] uppercase font-semibold">[UI PROTOTYPING]</span>
+              </div>
+              <div class="flex items-center gap-3 px-5 py-3 border-[1.5px] border-[#2D2723] bg-[#FCF5E6]">
+                <span class="w-2.5 h-2.5 bg-[#484D5F]"></span>
+                <span class="font-heading font-bold text-sm tracking-wider uppercase text-[#2D2723]">CANVA</span>
+                <span class="text-xs text-[#B09677] uppercase font-semibold">[PRESENTATION DESIGN]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================
+         5. SECTION 03 / FEATURED WORK (Blue Background #5B6689, Cream Typography)
+         ======================================================================== -->
+    <section class="bg-[#5B6689] text-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="work">
+      <div class="container-editorial">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#EAD4A0]/40 mb-14">
+          <div>
+            <span
+              class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#EAD4A0] uppercase block mb-1">03
+              / CASE STUDY</span>
+            <h2 class="editorial-section-title text-[#FCF5E6]">BUILDING WITH PURPOSE</h2>
+          </div>
+          <div class="font-heading text-xs uppercase tracking-widest text-[#EAD4A0]/90">
+            COMPETITION PROTOTYPE • SMART INDIA HACKATHON 2026
+          </div>
+        </div>
+        <!-- Featured Project Master Card -->
+        <article class="bg-[#484D5F] border-[2px] border-[#EAD4A0] shadow-[8px_8px_0px_#2D2723] p-8 md:p-12">
+          <!-- Top Project Meta Strip -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#EAD4A0]/30 mb-8">
+            <div class="flex items-center gap-3">
+              <span
+                class="px-3 py-1 bg-[#EAD4A0] text-[#2D2723] font-heading font-bold text-xs tracking-wider uppercase">SIH
+                2026</span>
+              <span class="font-heading text-sm uppercase tracking-widest text-[#FCF5E6]">ACADEMIA–INDUSTRY
+                PLATFORM</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-heading tracking-widest uppercase text-[#EAD4A0]">
+              <span>TEAM: 6 MEMBERS</span>
+              <span>•</span>
+              <span>ROLE: CORE CONTRIBUTOR</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <!-- Left Column: Case Study Narrative (Cols 7) -->
+            <div class="lg:col-span-7 space-y-6">
+              <div>
+                <h3 class="font-display text-5xl md:text-7xl text-[#EAD4A0] tracking-tight uppercase leading-none mb-3">
+                  SKILLBRIDGE
+                </h3>
+                <p class="font-heading text-base md:text-lg font-bold text-[#FCF5E6] uppercase tracking-wider">
+                  Academia–Industry Skill Mapping &amp; Readiness Engine
+                </p>
+              </div>
+              <!-- Problem & Solution Box -->
+              <div class="p-6 bg-[#5B6689] border border-[#EAD4A0]/40 space-y-3">
+                <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#EAD4A0] block">THE
+                  CHALLENGE &amp; CONCEPT</span>
+                <p class="font-body text-sm md:text-base text-[#FCF5E6] leading-relaxed">
+                  Colleges often educate students without real-time alignment to changing industry requirements.
+                  SkillBridge is a student-designed platform concept connecting <strong>students, faculty, placement
+                    officers, and companies</strong> to systematically identify job-specific skill gaps and improve
+                  graduate employability.
+                </p>
+              </div>
+              <!-- Core Features Breakdown -->
+              <div class="space-y-3">
+                <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#EAD4A0] block">CORE
+                  ARCHITECTURAL FEATURES</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-body">
+                  <div class="p-3.5 bg-[#484D5F] border border-[#EAD4A0]/30 flex items-start gap-2.5">
+                    <span class="text-[#EAD4A0] font-bold">01.</span>
+                    <span><strong>Skill Mapping:</strong> Live mapping of curriculum coursework to targeted technical
+                      roles.</span>
+                  </div>
+                  <div class="p-3.5 bg-[#484D5F] border border-[#EAD4A0]/30 flex items-start gap-2.5">
+                    <span class="text-[#EAD4A0] font-bold">02.</span>
+                    <span><strong>Readiness Assessment:</strong> Quantitative benchmarks on technical &amp; soft skill
+                      proficiencies.</span>
+                  </div>
+                  <div class="p-3.5 bg-[#484D5F] border border-[#EAD4A0]/30 flex items-start gap-2.5">
+                    <span class="text-[#EAD4A0] font-bold">03.</span>
+                    <span><strong>Certification Tracking:</strong> Verification hub for validated industry
+                      credentials.</span>
+                  </div>
+                  <div class="p-3.5 bg-[#484D5F] border border-[#EAD4A0]/30 flex items-start gap-2.5">
+                    <span class="text-[#EAD4A0] font-bold">04.</span>
+                    <span><strong>Gap Analysis:</strong> Actionable learning roadmaps to bridge critical
+                      deficiencies.</span>
+                  </div>
+                </div>
+              </div>
+              <!-- My Contribution Callout -->
+              <div class="p-4 bg-[#FCF5E6] text-[#2D2723] border border-[#2D2723]">
+                <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677] block mb-1">MY
+                  INDIVIDUAL CONTRIBUTION</span>
+                <p class="font-body text-sm leading-relaxed">
+                  Contributed to the assessment logic and student skill-profile mapping workflow, along with frontend UI
+                  implementation and prototype presentation for the hackathon committee.
+                </p>
+              </div>
+              <!-- Tech Stack Pills -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="pill-tag bg-[#EAD4A0] text-[#2D2723]">HTML5</span>
+                <span class="pill-tag bg-[#EAD4A0] text-[#2D2723]">CSS3</span>
+                <span class="pill-tag bg-[#EAD4A0] text-[#2D2723]">JAVASCRIPT</span>
+                <span class="pill-tag bg-[#EAD4A0] text-[#2D2723]">DATABASE ARCHITECTURE</span>
+                <span class="pill-tag bg-[#EAD4A0] text-[#2D2723]">UI/UX PROTOTYPING</span>
+              </div>
+              <!-- Links Action Bar -->
+              <div class="flex flex-wrap gap-4 pt-4">
+                <a class="btn-editorial-blue-filled" href="https://priyadharshini-runku.github.io/hack/"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>View Live Prototype</span>
+                  <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+                    <line x1="7" x2="17" y1="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a class="btn-editorial-blue-outline" href="https://github.com/priyadharshini-runku/hack.git"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>GitHub Repository</span>
+                  <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- Right Column: Abstract UI Simulation (Cols 5) -->
+            <div
+              class="lg:col-span-5 bg-[#FCF5E6] text-[#2D2723] border-[2px] border-[#2D2723] p-6 shadow-[8px_8px_0px_#2D2723]">
+              <!-- Mockup Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-[#2D2723]/30 mb-6">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 border border-[#2D2723] bg-[#2D2723]"></span>
+                  <span class="w-3 h-3 border border-[#2D2723] bg-[#EAD4A0]"></span>
+                  <span class="w-3 h-3 border border-[#2D2723] bg-[#5B6689]"></span>
+                </div>
+                <div
+                  class="font-heading text-[11px] font-bold tracking-widest uppercase bg-[#FFFDF7] px-3 py-1 border border-[#2D2723]">
+                  SKILLBRIDGE.ENGINE // V1.0
+                </div>
+              </div>
+              <!-- Mockup Steps -->
+              <div class="space-y-4">
+                <div class="border border-[#2D2723] p-4 bg-[#FFFDF7]">
+                  <div class="flex justify-between items-center mb-1">
+                    <span class="font-heading text-xs font-bold uppercase text-[#5B6689]">STEP 01: STUDENT
+                      PROFILE</span>
+                    <span
+                      class="text-[10px] font-heading font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 border border-emerald-300">SYNCHRONIZED</span>
+                  </div>
+                  <div class="font-heading text-sm font-bold text-[#2D2723]">Priya Dharshini (IT - Sem III)</div>
+                  <div class="font-body text-xs text-[#2D2723]/70 mt-1">Core target: Software Development &amp; AI
+                    Engineering</div>
+                </div>
+                <div class="flex justify-center text-[#5B6689]">
+                  <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+                    <line x1="12" x2="12" y1="5" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                </div>
+                <div class="border border-[#2D2723] p-4 bg-[#FFFDF7]">
+                  <div class="flex justify-between items-center mb-1">
+                    <span class="font-heading text-xs font-bold uppercase text-[#5B6689]">STEP 02: GAP ANALYSIS
+                      MATRIX</span>
+                    <span
+                      class="text-[10px] font-heading font-bold text-amber-800 bg-amber-100 px-2 py-0.5 border border-amber-300">EVALUATION</span>
+                  </div>
+                  <div class="space-y-2 mt-2 font-heading text-xs uppercase">
+                    <div class="flex justify-between">
+                      <span>C / Algorithms</span>
+                      <span class="font-bold text-emerald-600">75% • READY</span>
+                    </div>
+                    <div class="w-full bg-[#EAD4A0]/40 h-2 border border-[#2D2723]">
+                      <div class="bg-[#5B6689] h-full" style="width: 75%;"></div>
+                    </div>
+                    <div class="flex justify-between pt-1">
+                      <span>Relational DBMS</span>
+                      <span class="font-bold text-emerald-600">65% • ON TRACK</span>
+                    </div>
+                    <div class="w-full bg-[#EAD4A0]/40 h-2 border border-[#2D2723]">
+                      <div class="bg-[#5B6689] h-full" style="width: 65%;"></div>
+                    </div>
+                    <div class="flex justify-between pt-1">
+                      <span>Java OOP / API</span>
+                      <span class="font-bold text-amber-700">60% • RECOMMENDED</span>
+                    </div>
+                    <div class="w-full bg-[#EAD4A0]/40 h-2 border border-[#2D2723]">
+                      <div class="bg-[#B09677] h-full" style="width: 60%;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-center text-[#5B6689]">
+                  <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+                    <line x1="12" x2="12" y1="5" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                </div>
+                <div class="border border-[#2D2723] p-4 bg-[#EAD4A0]">
+                  <span class="font-heading text-xs font-bold uppercase text-[#2D2723] block mb-1">STEP 03: TAILORED
+                    LEARNING PATHWAY</span>
+                  <p class="font-body text-xs text-[#2D2723] leading-relaxed">
+                    Automated curation of targeted certifications, hands-on micro-projects, and industry mentor
+                    checkpoints.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-[#2D2723]/30 text-center font-heading text-xs uppercase tracking-widest text-[#5B6689]">
+                Presented at Smart India Hackathon
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- ========================================================================
+         6. SECTION 04 / EXPLORATION (Cream-light Background #FCF5E6)
+         ======================================================================== -->
+    <section class="bg-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="exploration">
+      <div class="container-editorial">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b-[1.5px] border-[#2D2723] mb-14">
+          <div>
+            <span
+              class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#B09677] uppercase block mb-1">04
+              / ACTIVE CURRICULUM</span>
+            <h2 class="editorial-section-title text-[#2D2723]">CURRENTLY LEARNING</h2>
+          </div>
+          <p class="font-body text-sm text-[#2D2723] max-w-sm">
+            Current focal points where coursework directly converts into weekly experiments and self-directed building.
+          </p>
+        </div>
+        <!-- 3 Large Editorial Blocks -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Block 01 -->
+          <div class="editorial-card p-8 bg-[#FFFDF7] flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center pb-4 border-b border-[#2D2723]/20 mb-6">
+                <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677]">AREA 01</span>
+                <span class="badge-stamp text-[#5B6689] border-[#5B6689] bg-[#FCF5E6] text-[10px]">CURRENTLY
+                  LEARNING</span>
+              </div>
+              <h3 class="font-display text-4xl text-[#2D2723] uppercase mb-4 leading-none">
+                WEB DEVELOPMENT
+              </h3>
+              <p class="font-body text-sm text-[#2D2723] leading-relaxed mb-6">
+                Building a stronger foundation in HTML, CSS and JavaScript through practical frontend work, responsive
+                layouts and UI interaction patterns. Focus on clean semantics, accessibility, and modern CSS layout
+                structures.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-[#2D2723]/20 flex flex-wrap gap-2">
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">HTML5</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">CSS3</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">JAVASCRIPT</span>
+            </div>
+          </div>
+          <!-- Block 02 -->
+          <div class="editorial-card p-8 bg-[#FFFDF7] flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center pb-4 border-b border-[#2D2723]/20 mb-6">
+                <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677]">AREA 02</span>
+                <span class="badge-stamp text-[#B09677] border-[#B09677] bg-[#FCF5E6] text-[10px]">EXPLORING</span>
+              </div>
+              <h3 class="font-display text-4xl text-[#2D2723] uppercase mb-4 leading-none">
+                ARTIFICIAL INTELLIGENCE
+              </h3>
+              <p class="font-body text-sm text-[#2D2723] leading-relaxed mb-6">
+                Exploring artificial intelligence and emerging technologies with a focus on understanding practical
+                algorithms, machine learning workflows, and real-world software applications that enhance human
+                productivity.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-[#2D2723]/20 flex flex-wrap gap-2">
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">PYTHON</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">AI ALGORITHMS</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">DATA LOGIC</span>
+            </div>
+          </div>
+          <!-- Block 03 -->
+          <div class="editorial-card p-8 bg-[#FFFDF7] flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center pb-4 border-b border-[#2D2723]/20 mb-6">
+                <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677]">AREA 03</span>
+                <span class="badge-stamp text-[#5B6689] border-[#5B6689] bg-[#FCF5E6] text-[10px]">CURRENTLY
+                  LEARNING</span>
+              </div>
+              <h3 class="font-display text-4xl text-[#2D2723] uppercase mb-4 leading-none">
+                PROGRAMMING &amp; DBMS
+              </h3>
+              <p class="font-body text-sm text-[#2D2723] leading-relaxed mb-6">
+                Strengthening programming fundamentals, data structures, DBMS concepts and SQL through rigorous academic
+                coursework, algorithmic problem-solving practice, and relational schema modeling.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-[#2D2723]/20 flex flex-wrap gap-2">
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">C</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">DATA STRUCTURES</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">JAVA</span>
+              <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723]">SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================
+         7. SECTION 05 / JOURNEY (Blue Background #5B6689, Cream Typography)
+         ======================================================================== -->
+    <section class="bg-[#5B6689] text-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="journey">
+      <div class="container-editorial">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#EAD4A0]/40 mb-14">
+          <div>
+            <span
+              class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#EAD4A0] uppercase block mb-1">05
+              / TIMELINE</span>
+            <h2 class="editorial-section-title text-[#FCF5E6]">MY JOURNEY</h2>
+          </div>
+          <div class="font-heading text-xs uppercase tracking-widest text-[#EAD4A0]/90">
+            CHRONOLOGY OF MILESTONES &amp; LEARNING
+          </div>
+        </div>
+        <!-- Editorial Timeline Structure -->
+        <div class="max-w-4xl mx-auto space-y-8 relative">
+          <!-- Timeline Entry 01 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 border-b border-[#EAD4A0]/30">
+            <div class="md:col-span-3">
+              <div class="font-display text-4xl text-[#EAD4A0]">2025</div>
+              <div class="font-heading text-xs tracking-widest uppercase text-[#FCF5E6]/70 mt-1">ACADEMIC START</div>
+            </div>
+            <div class="md:col-span-9 bg-[#484D5F] p-6 border-[1.5px] border-[#EAD4A0] shadow-[4px_4px_0px_#2D2723]">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-heading text-xl font-bold uppercase text-[#FCF5E6]">Started B.Tech in Information
+                  Technology</h3>
+                <span class="text-xs font-heading font-semibold text-[#EAD4A0]">SRKR ENGG. COLLEGE</span>
+              </div>
+              <p class="font-body text-sm text-[#FCF5E6]/90 leading-relaxed mb-3">
+                Commenced undergraduate studies in Information Technology at Sagi Ramakrishnam Raju Engineering College.
+                Immersed in foundational computer science principles, engineering mathematics, and computational logic.
+              </p>
+              <div class="font-heading text-xs uppercase text-[#EAD4A0] font-bold">
+                CURRENT CGPA: 7.94 • ACTIVE CLASSROOM PARTICIPANT
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Entry 02 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 border-b border-[#EAD4A0]/30">
+            <div class="md:col-span-3">
+              <div class="font-display text-4xl text-[#EAD4A0]">2026</div>
+              <div class="font-heading text-xs tracking-widest uppercase text-[#FCF5E6]/70 mt-1">NATIONAL HACKATHON
+              </div>
+            </div>
+            <div class="md:col-span-9 bg-[#484D5F] p-6 border-[1.5px] border-[#EAD4A0] shadow-[4px_4px_0px_#2D2723]">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-heading text-xl font-bold uppercase text-[#FCF5E6]">Smart India Hackathon 2026</h3>
+                <span class="text-xs font-heading font-semibold text-[#EAD4A0]">6-MEMBER SQUAD</span>
+              </div>
+              <p class="font-body text-sm text-[#FCF5E6]/90 leading-relaxed mb-3">
+                Participated as a key team member creating <strong>SkillBridge</strong> (an Academia–Industry Skill
+                Mapping Platform). Designed skill-profile assessment workflows, contributed to front-end presentation,
+                and presented the solution to technical evaluators.
+              </p>
+              <div class="font-heading text-xs uppercase text-[#EAD4A0] font-bold">
+                EXPERIENCE: COLLABORATIVE RAPID PROTOTYPING &amp; PITCHING
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Entry 03 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 border-b border-[#EAD4A0]/30">
+            <div class="md:col-span-3">
+              <div class="font-display text-4xl text-[#EAD4A0]">2026</div>
+              <div class="font-heading text-xs tracking-widest uppercase text-[#FCF5E6]/70 mt-1">FOUNDATION EXPANSION
+              </div>
+            </div>
+            <div class="md:col-span-9 bg-[#484D5F] p-6 border-[1.5px] border-[#EAD4A0] shadow-[4px_4px_0px_#2D2723]">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-heading text-xl font-bold uppercase text-[#FCF5E6]">Deepening Programming &amp; Database
+                  Skills</h3>
+                <span class="text-xs font-heading font-semibold text-[#EAD4A0]">TECHNICAL DRILLS</span>
+              </div>
+              <p class="font-body text-sm text-[#FCF5E6]/90 leading-relaxed mb-3">
+                Completed C Essentials credentials, mastered fundamental data structures, practiced SQL queries, and
+                started exploring object-oriented design in Java along with modern JavaScript web architecture.
+              </p>
+              <div class="font-heading text-xs uppercase text-[#EAD4A0] font-bold">
+                CERTIFICATIONS: C ESSENTIALS 1 &amp; 2 ACHIEVED
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Entry 04 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+            <div class="md:col-span-3">
+              <div class="font-display text-4xl text-[#EAD4A0]">PRESENT</div>
+              <div class="font-heading text-xs tracking-widest uppercase text-[#FCF5E6]/70 mt-1">ACTIVE HORIZON</div>
+            </div>
+            <div
+              class="md:col-span-9 bg-[#FCF5E6] text-[#2D2723] p-6 border-[1.5px] border-[#2D2723] shadow-[4px_4px_0px_#2D2723]">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-heading text-xl font-bold uppercase text-[#2D2723]">Continuous Building &amp; Internship
+                  Search</h3>
+                <span class="text-xs font-heading font-bold text-[#5B6689] uppercase">OPEN HORIZON</span>
+              </div>
+              <p class="font-body text-sm text-[#2D2723] leading-relaxed mb-3">
+                Actively seeking internship and student collaboration opportunities where I can apply my problem-solving
+                ability, write clean code, and learn from experienced engineering teams.
+              </p>
+              <div class="font-heading text-xs uppercase text-[#5B6689] font-bold">
+                READY TO CONTRIBUTE TO IMPACTFUL PROJECTS
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================
+         8. ACADEMIC FOUNDATION & CREDENTIALS (Cream-light Background #FCF5E6)
+         ======================================================================== -->
+    <section class="bg-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="academics">
+      <div class="container-editorial space-y-16">
+        <!-- Part A: Academic Scores -->
+        <div>
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b-[1.5px] border-[#2D2723] mb-10">
+            <div>
+              <span
+                class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#B09677] uppercase block mb-1">RECORD
+                OF SCHOLARSHIP</span>
+              <h2 class="editorial-section-title text-[#2D2723]">EDUCATION</h2>
+            </div>
+            <p class="font-heading text-xs uppercase tracking-widest text-[#2D2723]">
+              CONSISTENT HIGH-ACADEMIC PERFORMANCE
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- B.Tech Card -->
+            <div class="editorial-card p-6 md:p-8 bg-[#FFFDF7] flex flex-col justify-between">
+              <div>
+                <span class="pill-tag bg-[#EAD4A0] text-[#2D2723] mb-4">UNDERGRADUATE</span>
+                <h3 class="font-heading text-2xl font-bold text-[#2D2723] uppercase mt-2 mb-1">B.Tech — Information
+                  Technology</h3>
+                <p class="font-body text-xs text-[#2D2723]/80 mb-6">
+                  Sagi Ramakrishnam Raju Engineering College<br />
+                  <strong>2025–2029</strong> • 2nd Year, Semester I
+                </p>
+              </div>
+              <div class="pt-6 border-t border-[#2D2723]/25 flex items-baseline justify-between">
+                <span class="font-heading text-xs font-bold text-[#B09677] uppercase">CURRENT CGPA</span>
+                <span class="font-display text-5xl text-[#2D2723]">7.94</span>
+              </div>
+            </div>
+            <!-- Class XII Card -->
+            <div class="editorial-card p-6 md:p-8 bg-[#FFFDF7] flex flex-col justify-between">
+              <div>
+                <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723] mb-4">HIGHER SECONDARY</span>
+                <h3 class="font-heading text-2xl font-bold text-[#2D2723] uppercase mt-2 mb-1">Intermediate — Class XII
+                </h3>
+                <p class="font-body text-xs text-[#2D2723]/80 mb-6">
+                  Board of Intermediate Education<br />
+                  Major Stream: Mathematics, Physics, Chemistry
+                </p>
+              </div>
+              <div class="pt-6 border-t border-[#2D2723]/25 flex items-baseline justify-between">
+                <span class="font-heading text-xs font-bold text-[#B09677] uppercase">SCORE SECURED</span>
+                <span class="font-display text-5xl text-[#5B6689]">96%</span>
+              </div>
+            </div>
+            <!-- Class X Card -->
+            <div class="editorial-card p-6 md:p-8 bg-[#FFFDF7] flex flex-col justify-between">
+              <div>
+                <span class="pill-tag bg-[#FCF5E6] border border-[#2D2723] text-[#2D2723] mb-4">SECONDARY SCHOOL</span>
+                <h3 class="font-heading text-2xl font-bold text-[#2D2723] uppercase mt-2 mb-1">Secondary School — Class
+                  X</h3>
+                <p class="font-body text-xs text-[#2D2723]/80 mb-6">
+                  Board of Secondary Education<br />
+                  General High School Curriculum
+                </p>
+              </div>
+              <div class="pt-6 border-t border-[#2D2723]/25 flex items-baseline justify-between">
+                <span class="font-heading text-xs font-bold text-[#B09677] uppercase">SCORE SECURED</span>
+                <span class="font-display text-5xl text-[#2D2723]">93.8%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Part B: Certifications & Beyond the Classroom -->
+        <div class="pt-6 border-t-[1.5px] border-[#2D2723]">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Left: Certifications (Cols 6) -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="pb-3 border-b border-[#2D2723]/30">
+                <span class="font-heading text-xs font-bold tracking-widest text-[#B09677] uppercase">VERIFIED
+                  CREDENTIALS</span>
+                <h3 class="font-heading text-3xl font-bold text-[#2D2723] uppercase">CERTIFICATIONS</h3>
+              </div>
+              <div class="space-y-3">
+                <div
+                  class="p-5 border-[1.5px] border-[#2D2723] bg-[#FFFDF7] flex items-center justify-between shadow-[2px_2px_0px_#2D2723]">
+                  <div>
+                    <h4 class="font-heading text-lg font-bold text-[#2D2723] uppercase">C Essentials 1</h4>
+                    <p class="font-body text-xs text-[#2D2723]/70">Foundational Programming Certification</p>
+                  </div>
+                  <span class="badge-stamp text-[#2D2723] border-[#2D2723] bg-[#EAD4A0]">COMPLETED</span>
+                </div>
+                <div
+                  class="p-5 border-[1.5px] border-[#2D2723] bg-[#FFFDF7] flex items-center justify-between shadow-[2px_2px_0px_#2D2723]">
+                  <div>
+                    <h4 class="font-heading text-lg font-bold text-[#2D2723] uppercase">C Essentials 2</h4>
+                    <p class="font-body text-xs text-[#2D2723]/70">Advanced C Language &amp; Data Structuring</p>
+                  </div>
+                  <span class="badge-stamp text-[#2D2723] border-[#2D2723] bg-[#EAD4A0]">COMPLETED</span>
+                </div>
+                <div
+                  class="p-5 border-[1.5px] border-[#2D2723] bg-[#FFFDF7] flex items-center justify-between shadow-[2px_2px_0px_#2D2723]">
+                  <div>
+                    <h4 class="font-heading text-lg font-bold text-[#2D2723] uppercase">NSS Certificate</h4>
+                    <p class="font-body text-xs text-[#2D2723]/70">Community Service &amp; Leadership Engagement</p>
+                  </div>
+                  <span class="badge-stamp text-[#5B6689] border-[#5B6689] bg-[#FCF5E6]">GRADE: A+</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right: Beyond the Classroom (Cols 6) -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="pb-3 border-b border-[#2D2723]/30">
+                <span class="font-heading text-xs font-bold tracking-widest text-[#B09677] uppercase">COMMUNITY &amp;
+                  CLUBS</span>
+                <h3 class="font-heading text-3xl font-bold text-[#2D2723] uppercase">BEYOND THE CLASSROOM</h3>
+              </div>
+              <div class="space-y-3">
+                <div
+                  class="p-5 border-[1.5px] border-[#2D2723] bg-[#FFFDF7] flex items-start gap-4 shadow-[2px_2px_0px_#2D2723]">
+                  <div
+                    class="w-8 h-8 bg-[#2D2723] text-[#FCF5E6] flex items-center justify-center font-heading font-bold text-xs shrink-0">
+                    CSI</div>
+                  <div>
+                    <h4 class="font-heading text-lg font-bold text-[#2D2723] uppercase">CSI Club Member</h4>
+                    <p class="font-body text-xs text-[#2D2723]/70">Active participant in Computer Society of India
+                      student community tech talks and workshops.</p>
+                  </div>
+                </div>
+                <div
+                  class="p-5 border-[1.5px] border-[#2D2723] bg-[#FFFDF7] flex items-start gap-4 shadow-[2px_2px_0px_#2D2723]">
+                  <div
+                    class="w-8 h-8 bg-[#5B6689] text-[#FCF5E6] flex items-center justify-center font-heading font-bold text-xs shrink-0">
+                    NSS</div>
+                  <div>
+                    <h4 class="font-heading text-lg font-bold text-[#2D2723] uppercase">NSS Club Member</h4>
+                    <p class="font-body text-xs text-[#2D2723]/70">National Service Scheme civic initiatives, campus
+                      coordination, and societal impact projects.</p>
+                  </div>
+                </div>
+                <div
+                  class="p-5 border-[1.5px] border-[#2D2723] bg-[#FFFDF7] flex items-start gap-4 shadow-[2px_2px_0px_#2D2723]">
+                  <div
+                    class="w-8 h-8 bg-[#B09677] text-[#2D2723] flex items-center justify-center font-heading font-bold text-xs shrink-0">
+                    SIH</div>
+                  <div>
+                    <h4 class="font-heading text-lg font-bold text-[#2D2723] uppercase">Smart India Hackathon
+                      Participant</h4>
+                    <p class="font-body text-xs text-[#2D2723]/70">Team participant in national 2026 innovation
+                      challenge tackling higher-education skill mapping.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Part C: Soft Skills, Interests & Languages -->
+        <div class="pt-6 border-t-[1.5px] border-[#2D2723]">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Soft Skills Pill Cloud -->
+            <div class="editorial-card p-6 bg-[#FFFDF7]">
+              <div class="pb-3 border-b border-[#2D2723]/20 mb-4">
+                <span class="font-heading text-xs font-bold tracking-widest text-[#B09677] uppercase">COLLABORATIVE
+                  STRENGTHS</span>
+                <h4 class="font-heading text-xl font-bold uppercase text-[#2D2723]">HOW I WORK</h4>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Communication</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Teamwork</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Problem
+                  Solving</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Adaptability</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Time
+                  Management</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Creativity</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Leadership</span>
+                <span
+                  class="px-3 py-1.5 border border-[#2D2723] bg-[#FCF5E6] font-heading font-semibold text-xs uppercase tracking-wider text-[#2D2723]">Willingness
+                  to Learn</span>
+              </div>
+            </div>
+            <!-- Areas of Interest -->
+            <div class="editorial-card p-6 bg-[#FFFDF7]">
+              <div class="pb-3 border-b border-[#2D2723]/20 mb-4">
+                <span class="font-heading text-xs font-bold tracking-widest text-[#B09677] uppercase">CORE
+                  PASSIONS</span>
+                <h4 class="font-heading text-xl font-bold uppercase text-[#2D2723]">CURIOUS ABOUT</h4>
+              </div>
+              <div class="space-y-2 text-xs font-body text-[#2D2723]">
+                <div class="p-2.5 bg-[#FCF5E6] border border-[#2D2723]/30">
+                  <strong class="font-heading uppercase block text-[#5B6689]">01. Software Development</strong>
+                  <span>Building clean, functional tools and applications from scratch.</span>
+                </div>
+                <div class="p-2.5 bg-[#FCF5E6] border border-[#2D2723]/30">
+                  <strong class="font-heading uppercase block text-[#5B6689]">02. Artificial Intelligence</strong>
+                  <span>Studying machine learning paradigms and real-world models.</span>
+                </div>
+                <div class="p-2.5 bg-[#FCF5E6] border border-[#2D2723]/30">
+                  <strong class="font-heading uppercase block text-[#5B6689]">03. Programming &amp; Database
+                    Tech</strong>
+                  <span>Relational data integrity, SQL optimization, and algorithm performance.</span>
+                </div>
+              </div>
+            </div>
+            <!-- Languages -->
+            <div class="editorial-card p-6 bg-[#FFFDF7]">
+              <div class="pb-3 border-b border-[#2D2723]/20 mb-4">
+                <span class="font-heading text-xs font-bold tracking-widest text-[#B09677] uppercase">MULTILINGUAL
+                  CAPABILITY</span>
+                <h4 class="font-heading text-xl font-bold uppercase text-[#2D2723]">LANGUAGES</h4>
+              </div>
+              <div class="space-y-3 font-heading uppercase text-xs">
+                <div class="p-3 border border-[#2D2723] bg-[#FCF5E6] flex justify-between items-center">
+                  <span class="font-bold text-sm text-[#2D2723]">TELUGU</span>
+                  <span class="pill-tag bg-[#2D2723] text-[#FCF5E6] text-[10px]">NATIVE PROFICIENCY</span>
+                </div>
+                <div class="p-3 border border-[#2D2723] bg-[#FCF5E6] flex justify-between items-center">
+                  <span class="font-bold text-sm text-[#2D2723]">ENGLISH</span>
+                  <span class="pill-tag bg-[#5B6689] text-[#FCF5E6] text-[10px]">FLUENT / PROFESSIONAL</span>
+                </div>
+                <div class="p-3 border border-[#2D2723] bg-[#FCF5E6] flex justify-between items-center">
+                  <span class="font-bold text-sm text-[#2D2723]">HINDI</span>
+                  <span class="pill-tag bg-[#B09677] text-[#2D2723] text-[10px]">CONVERSATIONAL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================
+         9. SECTION 06 / CONTACT (Blue Background #5B6689, Cream Typography)
+         ======================================================================== -->
+    <section class="bg-[#5B6689] text-[#FCF5E6] py-20 md:py-24 border-b-[1.5px] border-[#2D2723]" id="contact">
+      <div class="container-editorial">
+        <!-- Section Header -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#EAD4A0]/40 mb-14">
+          <div>
+            <span
+              class="font-heading text-xs md:text-sm font-bold tracking-[0.2em] text-[#EAD4A0] uppercase block mb-1">06
+              / INITIATE CONVERSATION</span>
+            <h2 class="editorial-section-title text-[#FCF5E6]">LET'S CREATE SOMETHING.</h2>
+          </div>
+          <p class="font-heading text-xs uppercase tracking-widest text-[#EAD4A0]/90">
+            AVAILABLE FOR INTERNSHIPS, PROJECTS &amp; DISCUSSIONS
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Left: Direct Channels & Context (Cols 5) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div class="bg-[#484D5F] border-[1.5px] border-[#EAD4A0] p-8 shadow-[6px_6px_0px_#2D2723]">
+              <span class="font-heading text-xs font-bold tracking-widest text-[#EAD4A0] uppercase block mb-2">OPEN
+                CHANNEL</span>
+              <h3 class="font-heading text-2xl font-bold uppercase text-[#FCF5E6] mb-4">I'M ALWAYS EAGER TO CONNECT</h3>
+              <p class="font-body text-sm text-[#FCF5E6]/90 leading-relaxed mb-6">
+                Have an internship opportunity, a project collaboration idea, or simply want to chat about engineering,
+                web technologies, and AI? Let’s exchange thoughts and build meaningful solutions.
+              </p>
+              <div class="space-y-3 font-heading uppercase text-xs">
+                <a class="p-3.5 border border-[#EAD4A0] bg-[#5B6689] hover:bg-[#EAD4A0] hover:text-[#2D2723] transition-colors flex items-center justify-between group no-underline text-[#FCF5E6]"
+                  href="mailto:priyadharshini.runku@example.com">
+                  <div class="flex items-center gap-3">
+                    <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>priyadharshini.runku@example.com</span>
+                  </div>
+                  <span
+                    class="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                </a>
+                <a class="p-3.5 border border-[#EAD4A0] bg-[#5B6689] hover:bg-[#EAD4A0] hover:text-[#2D2723] transition-colors flex items-center justify-between group no-underline text-[#FCF5E6]"
+                  href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                  <div class="flex items-center gap-3">
+                    <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect height="12" width="4" x="2" y="9"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn Profile</span>
+                  </div>
+                  <span
+                    class="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                </a>
+                <a class="p-3.5 border border-[#EAD4A0] bg-[#5B6689] hover:bg-[#EAD4A0] hover:text-[#2D2723] transition-colors flex items-center justify-between group no-underline text-[#FCF5E6]"
+                  href="https://github.com/priyadharshini-runku" rel="noopener noreferrer" target="_blank">
+                  <div class="flex items-center gap-3">
+                    <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                    <span>github.com/priyadharshini-runku</span>
+                  </div>
+                  <span
+                    class="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                </a>
+              </div>
+              <!-- Location Pin -->
+              <div
+                class="pt-6 mt-6 border-t border-[#EAD4A0]/30 flex items-center gap-3 text-xs font-heading tracking-widest text-[#EAD4A0]">
+                <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Visakhapatnam, Andhra Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Editorial Message Form (Cols 7) -->
+          <div
+            class="lg:col-span-7 bg-[#FCF5E6] text-[#2D2723] p-8 md:p-10 border-[2px] border-[#2D2723] shadow-[8px_8px_0px_#2D2723]">
+            <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677] block mb-2">DISPATCH
+              PROTOCOL</span>
+            <h3 class="font-heading text-2xl font-bold uppercase text-[#2D2723] mb-6">SEND A DIRECT MESSAGE</h3>
+            <form class="space-y-5" id="editorial-form" novalidate="">
+              <div>
+                <label class="block font-heading text-xs font-bold tracking-wider uppercase text-[#2D2723] mb-2"
+                  for="contact-name">Your Name *</label>
+                <input
+                  class="w-full px-4 py-3 bg-[#FFFDF7] border-[1.5px] border-[#2D2723] font-body text-sm text-[#2D2723] placeholder:text-[#2D2723]/40 focus:bg-[#FFFDF7] focus:outline-none focus:ring-2 focus:ring-[#5B6689] transition-all"
+                  id="contact-name" name="name" placeholder="e.g. Aditi Sharma" required="" type="text" />
+              </div>
+              <div>
+                <label class="block font-heading text-xs font-bold tracking-wider uppercase text-[#2D2723] mb-2"
+                  for="contact-email">Email Address *</label>
+                <input
+                  class="w-full px-4 py-3 bg-[#FFFDF7] border-[1.5px] border-[#2D2723] font-body text-sm text-[#2D2723] placeholder:text-[#2D2723]/40 focus:bg-[#FFFDF7] focus:outline-none focus:ring-2 focus:ring-[#5B6689] transition-all"
+                  id="contact-email" name="email" placeholder="e.g. aditi@organization.org" required="" type="email" />
+              </div>
+              <div>
+                <label class="block font-heading text-xs font-bold tracking-wider uppercase text-[#2D2723] mb-2"
+                  for="contact-msg">Your Message or Inquiry *</label>
+                <textarea
+                  class="w-full px-4 py-3 bg-[#FFFDF7] border-[1.5px] border-[#2D2723] font-body text-sm text-[#2D2723] placeholder:text-[#2D2723]/40 focus:bg-[#FFFDF7] focus:outline-none focus:ring-2 focus:ring-[#5B6689] transition-all resize-y"
+                  id="contact-msg" name="message"
+                  placeholder="Describe your project, internship opening, or thoughts..." required=""
+                  rows="5"></textarea>
+              </div>
+              <button class="w-full btn-editorial-primary text-center" type="submit">
+                <span>Send Message</span>
+                <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+                  <line x1="22" x2="11" y1="2" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+              <div
+                class="hidden p-4 bg-[#EAD4A0] border border-[#2D2723] text-xs font-heading font-bold uppercase tracking-wider text-[#2D2723]"
+                id="form-alert" role="alert">
+                Preparing email dispatch client... Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ========================================================================
+       10. EDITORIAL FOOTER (Cream-light Background)
+       ======================================================================== -->
+  <footer class="bg-[#FCF5E6] text-[#2D2723] pt-16 pb-12 border-t-[1.5px] border-[#2D2723]">
+    <div class="container-editorial">
+      <!-- Massive Hero Typographic Footer Stamp -->
+      <div class="pb-10 border-b-[1.5px] border-[#2D2723]">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="font-heading text-xs font-bold tracking-widest uppercase text-[#B09677] block mb-1">SIGNATURE
+              EDITION</span>
+            <div
+              class="font-display text-4xl sm:text-6xl md:text-8xl text-[#2D2723] uppercase tracking-tighter leading-none">
+              PRIYA DHARSHINI RUNKU
+            </div>
+          </div>
+          <a class="btn-editorial-outline text-xs self-start md:self-end" href="#home">
+            <span>Back to Top</span>
+            <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+              <line x1="12" x2="12" y1="19" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+        </div>
+        <p class="font-body text-base text-[#2D2723]/80 max-w-2xl">
+          Creative IT Student at Sagi Ramakrishnam Raju Engineering College. Passionate about software development,
+          database architecture, creative problem-solving and emerging artificial intelligence paradigms.
+        </p>
+      </div>
+      <!-- Footer Quick Index & Legal -->
+      <div
+        class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 font-heading text-xs uppercase tracking-widest text-[#2D2723]">
+        <div class="flex flex-wrap items-center gap-6">
+          <a class="hover:text-[#5B6689] transition-colors" href="#about">About</a>
+          <a class="hover:text-[#5B6689] transition-colors" href="#skills">Skills</a>
+          <a class="hover:text-[#5B6689] transition-colors" href="#work">Work</a>
+          <a class="hover:text-[#5B6689] transition-colors" href="#exploration">Learning</a>
+          <a class="hover:text-[#5B6689] transition-colors" href="#journey">Journey</a>
+          <a class="hover:text-[#5B6689] transition-colors" href="#academics">Academics</a>
+          <a class="hover:text-[#5B6689] transition-colors" href="#contact">Contact</a>
+        </div>
+        <div>
+          © <span id="copyright-year">2026</span> Priya Dharshini Runku. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ========================================================================
+       VANILLA JAVASCRIPT
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Dynamic Year
+      const yearEl = document.getElementById('copyright-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // 2. Mobile Menu Toggle
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (mobileToggle && mobileMenu) {
+        function toggleMobile(show) {
+          const isCurrentlyOpen = !mobileMenu.classList.contains('hidden');
+          const shouldOpen = show !== undefined ? show : !isCurrentlyOpen;
+
+          if (shouldOpen) {
+            mobileMenu.classList.remove('hidden');
+            mobileToggle.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+          } else {
+            mobileMenu.classList.add('hidden');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        }
+
+        mobileToggle.addEventListener('click', () => toggleMobile());
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => toggleMobile(false));
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            toggleMobile(false);
+            mobileToggle.focus();
+          }
+        });
+      }
+
+      // 3. Accessible Editorial Contact Form Handler (Mailto fallback)
+      const form = document.getElementById('editorial-form');
+      const formAlert = document.getElementById('form-alert');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const nameInput = document.getElementById('contact-name');
+          const emailInput = document.getElementById('contact-email');
+          const msgInput = document.getElementById('contact-msg');
+
+          if (!nameInput.value.trim() || !emailInput.value.trim() || !msgInput.value.trim()) {
+            alert('Please fill out all required fields.');
+            return;
+          }
+
+          const subject = encodeURIComponent(`Portfolio Inquiry from ${nameInput.value.trim()}`);
+          const body = encodeURIComponent(
+            `Name: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\n\nMessage:\n${msgInput.value.trim()}`
+          );
+
+          if (formAlert) {
+            formAlert.classList.remove('hidden');
+            formAlert.textContent = `Dispatching email client for ${nameInput.value.trim()}...`;
+          }
+
+          setTimeout(() => {
+            window.location.href = `mailto:priyadharshini.runku@example.com?subject=${subject}&body=${body}`;
+            form.reset();
+          }, 450);
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
